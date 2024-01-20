@@ -1,0 +1,108 @@
+@import url("./general/header.css");
+@import url("./general/info.css");
+
+*{
+    font-family: 'Merriweather', 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    overflow-y: hidden;
+
+    cursor: default;
+    user-select: none;
+}
+
+span.noBreak{
+    white-space: nowrap;
+}
+
+a:hover, a:hover *{ cursor: pointer; }
+
+html, body{
+    overflow: hidden;
+}
+
+body{
+    background-color: white;
+    transition: background 150ms;
+}
+body:has(div.viewport.black.show){
+    background-color: black;
+}
+
+
+/* headings */
+h1, h2, h3,
+h4, h5, h6{
+    font-family: 'GFS Didot', serif;
+}
+
+
+h1{
+    color: var(--magenta);
+    font-size: var(--font-size-h1);
+}
+
+h2{
+    font-size: var(--font-size-h2);
+}
+
+h3{
+    font-size: var(--font-size-h3);
+}
+
+.absolutoAncoradoCentro{
+    position: absolute;
+    translate: -50% -50%;
+}
+.absoluteCentrado{ top: 50%; left: 50%; }
+
+.fixado{
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.onHoverGoto{ filter: brightness(0.5); }
+body:has(.onHoverGoto) * { cursor: pointer;}
+
+
+i, em{ padding: 0 0.1em; }
+
+/* div do canvas */
+#canvasBrush{
+    width: 100dvw;
+    height: 100dvh;
+}
+
+/* main */
+main{
+    list-style: none;
+    overflow: auto;
+    display: flex;
+    flex-direction: row;
+    width: 100dvw;
+    height: 100dvh;
+}
+    main::-webkit-scrollbar{
+        background-color: var(--magenta-on-black);
+    }
+    main::-webkit-scrollbar-thumb{
+        background-color: var(--magenta);
+    }
+
+    main > div.viewport{
+        position: relative;
+        min-width: 100dvw;
+        height: 100%;
+        overflow: hidden;
+        opacity: 0;
+        transition: opacity 150ms;
+    }
+
+    main > div.viewport.show{
+        opacity: 1;
+    }
+
+    main > div.viewport.black{
+        color: white;
+    }

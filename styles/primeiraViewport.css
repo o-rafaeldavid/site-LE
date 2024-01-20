@@ -1,0 +1,61 @@
+/*
+    ========================
+    === SVGALTA
+    ========================
+*/
+
+svg#SVGalta{
+    width: 100%;
+    height: auto;
+    scale: 1.6;
+}
+    svg#SVGalta > g.linhas > line{
+        stroke: black;
+        stroke-opacity: 0.3;
+    }
+
+    g#alta > .hoverable{
+        stroke-width: 2px;
+        stroke: none;
+        transition: stroke 300ms, fill 300ms;
+    }
+        g#alta > .hoverable:hover:not([name="olho"]){
+            stroke: var(--magenta);
+            fill: var(--magenta-on-black);
+        }
+    g#alta > .hoverable[name="olho"]{
+        opacity: 0;
+        stroke: var(--magenta);
+        fill: var(--magenta);
+        fill-opacity: 0.3;
+        transition: opacity 300ms;
+    }
+        g#alta > .hoverable[name="olho"]:hover{ opacity: 1; }
+
+    image#baixaImg{ opacity: 0; }
+
+/*
+    ========================
+    === section baixa
+    ========================
+*/
+
+section#baixaSection{ position: absolute; }
+
+    section#baixaSection > span{
+        display: block;
+        width: 100%; height: 100%;
+    }
+/*
+    ========================
+    === comecaNavegar
+    ========================
+*/
+img#comecaNavegar{
+    position: absolute;
+    top: 0; right: 0;
+    width: 400px;
+    height: auto;
+
+    padding: 12px 24px;
+}

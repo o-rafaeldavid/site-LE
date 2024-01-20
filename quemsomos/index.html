@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Alta & Baixa | Uma Revista Tipográfica</title>
+        <!-- Estilos -->
+            <!-- Google Fonts Import -->
+                <link rel="preconnect" href="https://fonts.googleapis.com">
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                <!-- GFS Didot -->
+                <link href="https://fonts.googleapis.com/css2?family=GFS+Didot&display=swap" rel="stylesheet">
+                <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+            <!-- =================== -->
+            <link rel="stylesheet" href="../styles/root.css">
+            <link rel="stylesheet" href="../styles/general.css">
+            <link rel="stylesheet" href="../styles/spanToBrush.css">
+            <link rel="stylesheet" href="../styles/pages/article.css">
+        <!-- ======= -->
+
+        <!-- p5js -->
+        <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
+    </head>
+    
+
+
+    <!--
+        BODY
+     -->
+
+    <body>
+        <!-- div q tem o canvas para desenhar :) -->
+        <div id="canvasBrush" class="fixado"></div>
+        <!-- header -->
+        <script src="../js/config/createNavigation.js"></script>
+        <script>createNavigation("../imgs/setinha.png");</script>
+
+
+        <script src="../js/components/infoComponent/createInfo.js"></script>
+        <script>createInfo();</script>
+        <main>
+            <div class="viewport">
+                <h1 id="altaGrande">ALTA</h1>
+                <h1 id="baixaGrande">baixa</h1>
+                <article>
+                    <h3>
+                        <span class="noBreak">QUEM <span id="somos" class="spanToBrush">SOMOS</span></span>
+                    </h3>
+                    <p>
+                        <em><span class="spanToBrush">Alta Baixa</span></em> é uma revista de cultura tipográfica desenvolvida
+                        no ambito académico e que se propõe a refletir sobre
+                        todos os aspectos da tipografia, incluindo a sua história, e
+                        cujos conteúdos são deliberadamente ecléticos.
+                    </p>
+                    <br/>
+                    <p> Trata-se
+                        de uma revista que pretende publicar material histórico e
+                        contemporâneo, a partir de fontes académicas e jornalísticas.
+                        Isto significa que a revista deve oferecer uma mistura de artigos
+                        e materiais de referência e transmitir a convicção de que o
+                        opções de design devem estar em consonância com o conteúdo.
+                    </p>
+                </article>
+            </div>
+        </main>
+    </body>
+
+
+    <!-- 
+        =========================================================
+        =================== SCRIPTS
+        =========================================================
+     -->
+     <script src="../js/config/misc.js"></script>
+     <script src="../js/config/viewportsObserver.js"></script>
+     <script src="../js/components/mainConfig.js"></script>
+
+    <script src="../js/config/brush.js"></script>
+    <script src="../js/config/spanToBrush.js"></script>
+
+    <script src="../js/pages/altabaixaPos.js"></script>
+</html>

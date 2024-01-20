@@ -1,0 +1,29 @@
+/*
+    ========================
+    === INFO canvas e div
+    ========================
+*/
+
+canvas#linhaHoverableInfoCanvas{
+    position: absolute;
+    z-index: -1;
+    top: 0; left: 0;
+}
+
+div#info{
+    padding: 4px 6px;
+    background-color: var(--magenta);
+    color: white;
+    font-style: italic;
+}
+
+div#info, canvas#linhaHoverableInfoCanvas{
+    opacity: 0;
+    transition: opacity 150ms;
+}
+
+
+    html:has(.hoverable:hover) div#info,
+    html:has(.hoverable:hover) canvas#linhaHoverableInfoCanvas{
+        opacity: 1;
+    }
