@@ -34,7 +34,7 @@ const createNavigation = (setinhaURL) => {
             stop: "</span>"
         }
         addHyperlink(`<i>Ar${spanToBrush.start}tigo${spanToBrush.stop}s</i>`, "/")
-        addHyperlink(`<i>Quem ${spanToBrush.start}Somos${spanToBrush.stop}</i>`, "/quemsomos")
+        addHyperlink(`<i>Quem ${spanToBrush.start}Somos${spanToBrush.stop}</i>`, "/quemsomos.html")
 
     header.appendChild(nav)
     document.body.appendChild(header)
