@@ -1,7 +1,7 @@
 const viewportsObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         entry.target.classList.toggle("show", entry.isIntersecting)
-        if(footer !== undefined){
+        if(typeof footer !== "undefined"){
             footer.querySelectorAll("section")[
                 parseInt(entry.target.getAttribute("param"))
             ].classList.toggle("selected", entry.isIntersecting)

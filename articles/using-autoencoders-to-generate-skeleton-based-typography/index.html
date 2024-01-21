@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Alta & Baixa | Uma Revista Tipográfica</title>
+        <!-- Estilos -->
+            <!-- Google Fonts Import -->
+                <link rel="preconnect" href="https://fonts.googleapis.com">
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                <!-- GFS Didot -->
+                <link href="https://fonts.googleapis.com/css2?family=GFS+Didot&display=swap" rel="stylesheet">
+                <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+            <!-- =================== -->
+            <link rel="stylesheet" href="../../styles/root.css">
+            <link rel="stylesheet" href="../../styles/general.css">
+            <link rel="stylesheet" href="../../styles/spanToBrush.css">
+
+            <link rel="stylesheet" href="../../styles/pages/article.css">
+            <link rel="stylesheet" href="../../styles/pages/articles/general.css">
+        <!-- ======= -->
+
+        <!-- p5js -->
+        <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
+
+
+
+
+        <script src="../../js/config/sectionToDraw.js"></script>
+        <script src="../../js/pages/articles/generateArticle.js"></script>
+    </head>
+    
+
+
+    <!--
+        BODY
+     -->
+
+    <body>
+        <!-- div q tem o canvas para desenhar :) -->
+        <div id="canvasBrush" class="fixado"></div>
+        <!-- header -->
+        <script src="../../js/config/createNavigation.js"></script>
+        <script>createNavigation("../../imgs/setinha.png");</script>
+
+
+        <script src="../../js/components/infoComponent/createInfo.js"></script>
+        <script>createInfo();</script>
+        <main>
+            <div class="viewport" tit="cena" txt="primeiraViewport"></div>
+        </main>
+        <script src="../../js/config/createFooter.js"></script>
+        <script>createFooter();</script>
+    </body>
+
+
+    <!-- 
+        =========================================================
+        =================== SCRIPTS
+        =========================================================
+     -->
+     <script src="../../js/config/misc.js"></script>
+     <script src="../../js/config/viewportsObserver.js"></script>
+     <script src="../../js/components/mainConfig.js"></script>
+
+    <script src="../../js/config/brush.js"></script>
+    <script src="../../js/config/spanToBrush.js"></script>
+</html>

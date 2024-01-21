@@ -1,0 +1,15 @@
+#terceiraViewport{
+    padding: 64px 64px 0 64px;
+    box-sizing: border-box;
+}
+
+#terceiraViewport > h2 > span.magenta{
+    color: var(--magenta);
+}
+
+#terceiraViewport > ul{
+    position: absolute;
+    text-align: right;
+    width: 500px;
+    bottom: 64px; right: 64px;
+}

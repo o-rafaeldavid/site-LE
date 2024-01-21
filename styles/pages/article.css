@@ -11,12 +11,6 @@ article{
     article p{ text-align: justify; }
     article p::first-letter{ font-size: 1.5em ;}
 
-
-    article em{
-        color: var(--magenta);
-        font-weight: 600;
-    }
-
 article.columns{
     display: grid;
     grid-template-columns: repeat(2, 1fr);

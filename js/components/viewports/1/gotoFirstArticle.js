@@ -5,7 +5,6 @@ const toFirstArticle = [
 ]
 
 
-const toFirst = document.getElementById("treze")
 const gotoFirstArticle = () => window.location.href = "/articles/13-ways-of-looking-at-a-typeface"
 let antigoClick = () => {}
 

@@ -81,7 +81,14 @@ body:has(.onHoverGoto) * { cursor: pointer;}
 
 
 i, em{ padding: 0 0.1em; }
+em{
+    color: var(--magenta);
+    font-weight: 600;
+}
 
+div.viewport.black em{
+    color: var(--magenta-claro);
+}
 
 /* div do canvas */
 #canvasBrush{
