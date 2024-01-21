@@ -1,5 +1,7 @@
 /* style: styles/general/header.css */
 
+const checklocalhost = () => ((!window.location.href.includes("localhost")) ? "/site-LE" : "")
+
 const createNavigation = (setinhaURL) => {
     /* criar header */
     const header = document.createElement("header")
@@ -33,8 +35,8 @@ const createNavigation = (setinhaURL) => {
             start: "<span class='spanToBrush' corTraco='#fff'>",
             stop: "</span>"
         }
-        addHyperlink(`<i>Ar${spanToBrush.start}tigo${spanToBrush.stop}s</i>`, "/")
-        addHyperlink(`<i>Quem ${spanToBrush.start}Somos${spanToBrush.stop}</i>`, "/quemsomos.html")
+        addHyperlink(`<i>Ar${spanToBrush.start}tigo${spanToBrush.stop}s</i>`, `${checklocalhost()}/`)
+        addHyperlink(`<i>Quem ${spanToBrush.start}Somos${spanToBrush.stop}</i>`, `${checklocalhost()}/quemsomos.html`)
 
     header.appendChild(nav)
     document.body.appendChild(header)
