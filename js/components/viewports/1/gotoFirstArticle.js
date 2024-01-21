@@ -5,7 +5,7 @@ const toFirstArticle = [
 ]
 
 
-const gotoFirstArticle = () => window.location.href = "/articles/13-ways-of-looking-at-a-typeface.html"
+const gotoFirstArticle = () => window.location.href = "13-ways-of-looking-at-a-typeface.html"
 let antigoClick = () => {}
 
 toFirstArticle.forEach(toFirst => {

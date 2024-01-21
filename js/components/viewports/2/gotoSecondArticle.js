@@ -1,6 +1,6 @@
 const h2TerceiraViewport = document.querySelector("#terceiraViewport > h2")
 
-const gotoSecondArticle = () => window.location.href = "/articles/using-autoencoders-to-generate-skeleton-based-typography.html"
+const gotoSecondArticle = () => window.location.href = "using-autoencoders-to-generate-skeleton-based-typography.html"
 let antigoClick2 = () => {}
 
 
