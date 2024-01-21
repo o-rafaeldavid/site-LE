@@ -20,7 +20,7 @@ main.onwheel = (e) => {
     ){
 
         main.classList.add("scrolling")
-        const addTotal = -1 * sinal * (getNowMaxScroll() / (main.childElementCount - 1))
+        const addTotal = -1 * sinal * (getNowMaxScroll() / (viewports.length - 1))
         let counter = 0;
         let scroll = main.scrollLeft
 

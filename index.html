@@ -22,6 +22,10 @@
 
         <!-- p5js -->
         <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
+
+
+
+        <script src="./js/config/sectionToDraw.js"></script>
     </head>
 
 
@@ -181,11 +185,24 @@
                         ></image>
                 </svg>
 
-                <section id="baixaSection"><span class="spanToBrush" onStopLimit="showBaixaImg()"></span></section>
+                <section id="baixaSection">
+                    <img id="riscame" alt="" src="./imgs/riscame.png">
+                </section>
+                <script>
+                    sectionToDraw(
+                        document.getElementById("baixaSection"),
+                        undefined,
+                        undefined,
+                        "showBaixaImg()",
+                        document.getElementById("baixaImg")
+                    )
+                </script>
+
                 <img id="comecaNavegar" alt="" src="imgs/comecanavegar.png">
             </div>
             
             <div class="viewport black" id="segundaViewport">
+                <img id="michael-bierut" alt="" src="./imgs/michael-bierut.png">
                 <section>
                     <section><h1 id="treze" class="hoverable">13</h1></section>
                     <div></div><div></div><div></div><div></div>
@@ -227,7 +244,6 @@
     <script src="./js/config/viewportsObserver.js"></script>
     <script src="./js/components/mainConfig.js"></script>
     <script src="./js/components/viewports/0/altaHoverable.js"></script>
-    <script src="./js/components/viewports/0/sectionBaixaPosition.js"></script>
     <script src="./js/components/viewports/1/gotoFirstArticle.js"></script>
 
 

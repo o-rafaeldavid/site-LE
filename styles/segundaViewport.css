@@ -2,9 +2,13 @@
     position: relative;
 }
 
+#segundaViewport > section, #michael-bierut{ position: absolute; }
+#michael-bierut{ 
+    bottom: 20px; right: 20px;
+    width: 300px; height: auto;
+}
 
 #segundaViewport > section{
-    position: absolute;
     top: 0; left: 0;
     width: 100%; height: 100%;
 

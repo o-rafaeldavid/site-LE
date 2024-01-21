@@ -1,0 +1,40 @@
+footer{
+    position: absolute;
+    z-index: 1;
+    bottom: var(--scroll-thumb-height); left: 0;
+    width: 100dvw; height: 100px;
+
+    display: grid;
+    grid-template-rows: 1fr;
+}
+
+footer > section{
+    opacity: 0.1;
+    transition: opacity 300ms;
+
+    padding: 6px;
+    box-sizing: border-box;
+
+}
+
+footer > section.selected{
+    opacity: 1;
+    background-color: white;
+}
+
+footer > section.haveClick:hover{
+    opacity: 1;
+    background-color: white;
+}
+
+footer:has(section.haveClick:hover) > section.selected{
+    opacity: 0.5;
+}
+
+    footer > section.haveClick *{
+        cursor: pointer;
+    }
+
+    footer > section > p{
+        font-size: 0.9em;
+    }

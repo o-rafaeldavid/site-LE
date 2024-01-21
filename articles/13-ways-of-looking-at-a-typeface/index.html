@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Alta & Baixa | Uma Revista Tipográfica</title>
+        <!-- Estilos -->
+            <!-- Google Fonts Import -->
+                <link rel="preconnect" href="https://fonts.googleapis.com">
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                <!-- GFS Didot -->
+                <link href="https://fonts.googleapis.com/css2?family=GFS+Didot&display=swap" rel="stylesheet">
+                <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+            <!-- =================== -->
+            <link rel="stylesheet" href="../../styles/root.css">
+            <link rel="stylesheet" href="../../styles/general.css">
+            <link rel="stylesheet" href="../../styles/spanToBrush.css">
+
+            <link rel="stylesheet" href="../../styles/pages/article.css">
+            <link rel="stylesheet" href="../../styles/pages/articles/general.css">
+
+            
+            <link rel="stylesheet" href="../../styles/pages/articles/13-ways-of-looking-at-a-typeface/style.css">
+        <!-- ======= -->
+
+        <!-- p5js -->
+        <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
+
+
+
+
+        <script src="../../js/config/sectionToDraw.js"></script>
+        <script src="../../js/pages/articles/generateArticle.js"></script>
+    </head>
+    
+
+
+    <!--
+        BODY
+     -->
+
+    <body>
+        <!-- div q tem o canvas para desenhar :) -->
+        <div id="canvasBrush" class="fixado"></div>
+        <!-- header -->
+        <script src="../../js/config/createNavigation.js"></script>
+        <script>createNavigation("../../imgs/setinha.png");</script>
+
+
+        <script src="../../js/components/infoComponent/createInfo.js"></script>
+        <script>createInfo();</script>
+        <main>
+            <!-- INICIO -->
+            <div class="viewport" tit="00" txt="Introduction" italic="true">
+                <img id="michael-bierut-outline" alt="" src="../../imgs/artigos/1/michael-bierut-outline.jpg" class="absoluto">
+                <section>
+                    <img id="michael-bierut-pessoa" alt="" src="../../imgs/artigos/1/michael-bierut-pessoa.jpg" class="absoluto">
+                </section>
+                <section>
+                    <article class="columns">
+                        <div>
+                            <p>
+                                For the first ten years of my career,
+                                I worked for Massimo Vignelli,
+                                a designer who is legendary for using
+                                a very limited number of typefaces.
+                                Between 1980 and 1990, most of my
+                                projects were set in five fonts:
+                                Helvetica (naturally), Futura, Garamond
+                                No. 3, Century Expanded, and, of
+                                course, Bodoni. For Massimo, this was
+                                an ideological choice, an ethical
+                                imperative. “In the new computer age,”
+                                he once wrote, “the proliferation of typefaces
+                                and type manipulations represents
+                                a new level of visual pollution threatening
+                                our culture.Out of thousands of
+                                typefaces, all we need are a few basic
+                                ones, and trash the rest.”
+                            </p>
+                            <br>
+                            <p>
+                                For me, it became a time-saving device.
+                                <br>
+                                Why spend hours choosing between
+                                Bembo, Sabon and Garamond No. 3
+                                every time you needed a
+                                Venetian Roman?
+                                <br>
+                                For most people — my mom, for
+                                instance — these were
+                                distinctions without differences.
+                                <br>
+                                Why not just commit to
+                                Garamond No. 3 and never think about
+                                it again?
+                                <br>
+                                My Catholic school education must
+                                have well prepared me for this kind of
+                                moral clarity.
+                                <br>
+                                I accepted it gratefully.
+                            </p>
+                        </div>
+                        <div>
+                            <p>
+                                Then, after a decade, I left my first job.
+                                Suddenly I could use any typeface
+                                I wanted, and I went nuts. On one of my
+                                first projects, I used 37 different fonts
+                                on 16 pages. My wife, who had attended
+                                Catholic school herself, found this all
+                                too familiar. She remembered classmates
+                                who had switched to public school
+                                after eight years under the nuns: freed
+                                at last from demure plaid uniforms,
+                                they wore the shortest skirts they could
+                                find. “Jesus,” she said, looking at one
+                                of my multiple font demolition derbies.
+                                “You’ve become a real slut,
+                                haven’t you?”
+                                <br><br><br><br>
+                                It was true.
+                                <br>
+                                Liberated from monogamy,
+                                I became typographically
+                                promiscuous. I have since, I think,
+                                learned to modulate my behavior — like
+                                any substance abuser, I learned that
+                                binges are <span class="noBreak">time-consuming</span>, costly,and
+                                ultimately counterprodutive — but I’ve
+                                never gone back to five-typeface sobriety.
+                                Those thousands of typefaces are still
+                                out there, but my recovery has required
+                                that I become more discriminating and
+                                come up with some answers to this
+                                seemingly simple question: why choose
+                                a particular typeface?
+                                <br><br>
+                                Here are <em><span class="spanToBrush" corTraco="#000">thirteen</span></em> reasons.
+                            </p>
+                        </div>
+                    </article>
+                </section>
+            </div>
+
+            <!--  -->
+            <!-- PONTO 01 -->
+            <div
+                class="viewport" id="tit01" tit="01"
+                txt="Because <span class='noBreak'>it <span class='spanToBrush'>works.<span></span>"
+            >
+                <img alt="" src="../../imgs/artigos/1/curvinha.png" id="curvinha1-1" class="absoluto">
+                <img alt="" src="../../imgs/artigos/1/curvinha.png" id="curvinha1-2" class="absoluto">
+            </div>
+            <script>
+                generateArticle(
+                    document.getElementById("tit01"),
+                    `
+                    <p>
+                        I’ve heard of several projects where the
+                        designer found a font that was created
+                        the same year the client’s organization
+                        was founded. This must give the <span class="hyphenate">recommendation</span>
+                        an aura of manifest destiny
+                        that is positively irresistible. I haven’t
+                        had that luck yet, but still try to find the
+                        same kind of evocative alignment.
+                    </p>
+                    `
+                );
+            </script>
+            
+
+
+
+            <!--  -->
+            <!-- PONTO 02 -->
+            <div
+                class="viewport" id="tit02" tit="02"
+                txt="Because <span class='noBreak'>you like</span> <span class='noBreak'>its history.</span>"
+            >
+                <img alt="" src="../../imgs/artigos/1/curvinha.png" id="curvinha2-1" class="absoluto">
+            </div>
+            <script>
+                generateArticle(
+                    document.getElementById("tit02"),
+                    `
+                    <p>
+                        Some typefaces are just perfect for
+                        certain things. I’ve specified exotic fonts
+                        for identity programs that work beautifully
+                        in headlines and even in text, but
+                        sooner or later you have to set that really
+                        tiny type at the bottom of the business
+                        reply card. This is what Franklin Gothic
+                        is for. Careful, though: some typefaces
+                        work too well.
+                    </p>
+                    <p>
+                        For instance, I was never a fan of Aldo
+                        Novarese’s Eurostyle, but I came to love
+                        it while working on a monograph on
+                        Eero Saarinen: they both share an
+                        expressiveness peculiar to the postwar
+                        optimism of the 1950’s.
+                    </p>
+                    `
+                )
+            </script>
+
+            
+            <!--  -->
+            <!-- PONTO 03 -->
+            <div class="viewport" id="tit03" tit="03" txt="Because you like its name."></div>
+            <script>
+                generateArticle(
+                    document.getElementById("tit03"),
+                    `
+                    <p>
+                        Once I saw a project in a student
+                        portfolio that undertook the dubious
+                        challenge of redesigning the Tiffany’s
+                        identity. I particularly disliked the font
+                        that was used, and I politely asked what
+                        it was.
+                    </p>
+                    <p>
+                        “Oh,” came the enthusiastic response,
+                        “that’s the best part! It’s called Tiffany!”
+                        On the other hand, Bruce Mau
+                        designed Spectacle, the book he created
+                        with David Rockwell, using the typeface
+                        Rockwell. I thought this was funny.
+                    </p>
+                    `
+                )
+            </script>
+
+            
+            <!--  -->
+            <!-- PONTO 04 -->
+            <div class="viewport" id="tit04" tit="04" txt="Because <span class='noBreak'>of who</span> <span class='spanToBrush' limit='200'>designed<span> it."></div>
+            <script>
+                generateArticle(
+                    document.getElementById("tit04"),
+                    `
+                    <p>
+                        Once I was working on a project where
+                        the client group included some very
+                        strong-minded architects. I picked
+                        Cheltenham, an idiosyncratic typeface
+                        that was not only well-suited to the project’s
+                        requirements, but was one of the
+                        few I know that was designed by an
+                        architect, Bertram Goodhue.
+                    </p>
+                    <p>
+                        Recently, I designed a publications program
+                        for a girls’ school. I used
+                        a typeface that was designed by a
+                        woman and named after another, Zuzana
+                        Licko’s Mrs. Eaves. In both cases, my
+                        clients knew that the public would be
+                        completely unaware of the story behind
+                        the font selection, but took some comfort
+                        in it nonetheless. I did too.
+                    </p>
+                    `
+                )
+            </script>
+
+            
+            <!--  -->
+            <!-- PONTO 05 -->
+            <div class="viewport" id="tit05" tit="05" txt="Because it was there."></div>
+            
+            <script>
+                generateArticle(
+                    document.getElementById("tit05"),
+                    `
+                    <p>
+                        Sometimes a typeface is already living
+                        on the premises when you show up,
+                        and it just seems mean to evict it. “We
+                        use Baskerville and Univers 65 on
+                        all our materials, but feel free to make
+                        an alternate suggestion.”
+                        Really? Why bother?
+                    </p>
+                    <p>
+                        It’s like one of those shows where the
+                        amateur chef is given a turnip, a bag
+                        of flour, a leg of lamb and some maple
+                        syrup and told to make a dish out of it.
+                        Sometimes it’s something you’ve never
+                        used before, which makes it even
+                        more fun.
+                    </p>
+                    `
+                )
+            </script>
+            <!--  -->
+            <!-- PONTO 06 -->
+            <div class="viewport" id="tit06" tit="06" txt="Because they made you.">
+                <img alt="" src="../../imgs/artigos/1/no.png" id="no" class="absoluto">
+            </div>
+            <script>
+                generateArticle(
+                    document.getElementById("tit06"),
+                    `
+                    <p>
+                        And sometimes it’s something you’ve
+                        never used before, for good reason. “We
+                        use ITC Eras on all our materials.” “Can
+                        I make an alternate suggestion?” <em><span class='spanToBrush'>“No.”</span></em>
+                        This is when blind embossing comes
+                        in handy.
+                    </p>
+                    `
+                )
+            </script>
+
+            
+            <!--  -->
+            <!-- PONTO 07 -->
+            <div class="viewport" id="tit07" tit="07" txt="Because it reminds you of something."></div>
+            
+            <script>
+                generateArticle(
+                    document.getElementById("tit07"),
+                    `
+                    <p>
+                        Whenever I want to make words look
+                        straightforward, conversational, and
+                        smart, I frequently consider Futura,
+                        upper and lower case. Why? Not because
+                        Paul Renner was straightforward,
+                        conversational, and smart, although he
+                        might have been.
+                    </p>
+                    <p>
+                        No, it’s because 45 years ago, Helmut
+                        Krone decided to use Futura in
+                        Doyle Dane Bernbach’s advertising for
+                        Volkswagen, and they still use it today.
+                        One warning, however: what reminds
+                        you of something may remind someone
+                        else of something else.
+                    </p>
+                    `
+                )
+            </script>
+            <!--  -->
+            <!-- PONTO 08 -->
+            <div class="viewport" id="tit08" tit="08" txt="Because it’s beautiful.">
+                <img alt="" src="../../imgs/artigos/1/estrelinhas/0.png" id="estrelinha0" class="absoluto">
+                <img alt="" src="../../imgs/artigos/1/estrelinhas/0.png" id="estrelinha1" class="absoluto">
+                <img alt="" src="../../imgs/artigos/1/estrelinhas/0.png" id="estrelinha2" class="absoluto">
+                <img alt="" src="../../imgs/artigos/1/estrelinhas/1.png" id="estrelinha3" class="absoluto">
+                <img alt="" src="../../imgs/artigos/1/curvinha.png" id="curvinha8-1" class="absoluto">
+            </div>
+            <script>
+                generateArticle(
+                    document.getElementById("tit08"),
+                    `
+                    <p>
+                        Cyrus Highsmith's Novia is now
+                        commercially available. He originally
+                        designed it for the headlines in Martha
+                        Stewart Weddings. Resistance is futile,
+                        at least mine is.
+                    </p>
+                    `
+                )
+            </script>
+
+            
+            <!--  -->
+            <!-- PONTO 09 -->
+            <div class="viewport" id="tit09" tit="09" txt="Because <span class='noBreak'>it’s ugly.</span>"></div>
+            
+            <script>
+                generateArticle(
+                    document.getElementById("tit09"),
+                    `
+                    <p>
+                        About 10 years ago, I was asked to redesign
+                        the logo for New York magazine.
+                        Milton Glaser had based the logo on
+                        Bookman Swash Italic, a typeface
+                        I found unimaginably dated and ugly.
+                        But Glaser’s logo had replaced an earlier
+                        one by Peter Palazzo that was based on
+                        Caslon Italic.
+                    </p>
+                    <p>
+                        I proposed we return to Caslon, and
+                        distinctly remember saying, “Bookman
+                        Swash Italic is always going to look
+                        ugly.” The other day, I saw something in
+                        the office that really caught my eye.
+                        It was set in Bookman Swash Italic, and
+                        it looked great. Ugly, but great.
+                    </p>
+                    `
+                )
+            </script>
+            <!--  -->
+            <!-- PONTO 10 -->
+            <div class="viewport" id="tit10" tit="10" txt="Because it’s boring."></div>
+            <script>
+                generateArticle(
+                    document.getElementById("tit10"),
+                    `
+                    <p>
+                        Tibor Kalman was fascinated with
+                        boring typefaces. “No, this one is too
+                        clever, this one is too interesting,” he
+                        kept saying when showed him the fonts
+                        I was proposing for his monograph.
+                        Anything but a boring typeface, he felt,
+                        got in the way of the ideas. We settled
+                        on Trade Gothic.
+                    </p>
+                    `
+                )
+            </script>
+
+            
+            <!--  -->
+            <!-- PONTO 11 -->
+            <div class="viewport" id="tit11" tit="11" txt="Because it’s special."></div>
+            <script>
+                generateArticle(
+                    document.getElementById("tit11"),
+                    `
+                    <p>
+                        In design as in fashion, nothing beats
+                        bespoke tailoring. I’ve commissioned
+                        custom typefaces from Jonathan Hoefler
+                        and Tobias Frere-Jones and Joe Finocchiaro,
+                        and we’re currently working
+                        with Matthew Carter and Chester.
+                        It is the ultimate indulgence, but well
+                        worth the extra effort. Is this proliferation?
+                        I say bring it on.    
+                    </p>
+                    `
+                )
+            </script>
+
+            
+            <!--  -->
+            <!-- PONTO 12 -->
+            <div class="viewport" id="tit12" tit="12" txt="Because you believe in it."></div>
+            <script>
+                generateArticle(
+                    document.getElementById("tit12"),
+                    `
+                    <p>
+                        Sometimes I think that Massimo Vignelli
+                        may be using too many typefaces, not
+                        too few. A true fundamentalist requires a
+                        monotheistic worldview: one world, one
+                        typeface.
+                    </p>
+                    <p>
+                        The designers at Experimental Jetset
+                        have made the case for Helvetica. My
+                        partner Abbott Miller had a period of life
+                        he calls “The Scala Years” when he used
+                        that typeface almost exclusively. When
+                        the time is right, I might make that kind
+                        of commitment myself.
+                    </p>
+                    `
+                )
+            </script>
+
+            
+            <!--  -->
+            <!-- PONTO 13 -->
+            <div class="viewport" id="tit13" tit="13" txt="Because you can’t not."></div>
+            <script>
+                generateArticle(
+                    document.getElementById("tit13"),
+                    `
+                    <p>
+                        Princeton Architectural Press is about to
+                        publish a collection of essays I’ve written,
+                        many of which first appeared here
+                        on Design Observer. I wanted it to feel
+                        like a real book for readers — it has no
+                        pictures — so I asked Abbott to design it.
+                        He suggested we set each one of the 79
+                        pieces in a different typeface.
+                    </p>
+                    <p>
+                        I loved this idea, but wasn't sure how
+                        far he’d want to go with it. “What about
+                        the one called ‘I Hate ITC Garamond?’”
+                        I asked him. “Would we set it in ITC
+                        Garamond?” He looked at me as if I was
+                        crazy. “Of course,” he said.
+                    </p>
+                    `
+                )
+            </script>
+        </main>
+        <script src="../../js/config/createFooter.js"></script>
+        <script>createFooter();</script>
+    </body>
+
+
+    <!-- 
+        =========================================================
+        =================== SCRIPTS
+        =========================================================
+     -->
+     <script src="../../js/config/misc.js"></script>
+     <script src="../../js/config/viewportsObserver.js"></script>
+     <script src="../../js/components/mainConfig.js"></script>
+
+    <script src="../../js/config/brush.js"></script>
+    <script src="../../js/config/spanToBrush.js"></script>
+</html>

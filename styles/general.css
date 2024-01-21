@@ -1,4 +1,5 @@
 @import url("./general/header.css");
+@import url("./general/footer.css");
 @import url("./general/info.css");
 
 *{
@@ -13,6 +14,10 @@
 
 span.noBreak{
     white-space: nowrap;
+}
+
+span.hyphenate{
+    hyphens: auto;
 }
 
 a:hover, a:hover *{ cursor: pointer; }
@@ -41,14 +46,23 @@ h1{
     color: var(--magenta);
     font-size: var(--font-size-h1);
 }
-
-h2{
-    font-size: var(--font-size-h2);
+h2{ font-size: var(--font-size-h2); }
+h3{ font-size: var(--font-size-h3); }
+h4{
+    color: var(--magenta);
+    font-size: var(--font-size-h4);
+}
+h5{
+    color: var(--magenta);
+    font-size: var(--font-size-h5);
 }
 
-h3{
-    font-size: var(--font-size-h3);
-}
+p{ font-size: var(--font-size-p); }
+
+
+
+
+.absoluto{ position: absolute; }
 
 .absolutoAncoradoCentro{
     position: absolute;
@@ -68,6 +82,7 @@ body:has(.onHoverGoto) * { cursor: pointer;}
 
 i, em{ padding: 0 0.1em; }
 
+
 /* div do canvas */
 #canvasBrush{
     width: 100dvw;
@@ -85,6 +100,7 @@ main{
 }
     main::-webkit-scrollbar{
         background-color: var(--magenta-on-black);
+        height: var(--scroll-thumb-height);
     }
     main::-webkit-scrollbar-thumb{
         background-color: var(--magenta);

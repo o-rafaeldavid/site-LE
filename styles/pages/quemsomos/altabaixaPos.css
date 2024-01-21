@@ -1,0 +1,9 @@
+.altabaixa{
+    position: absolute;
+    line-height: 1;
+    overflow: hidden;
+    opacity: .1;
+}
+
+#altaGrande{ top: 0; }
+#baixaGrande{ bottom: 0; }

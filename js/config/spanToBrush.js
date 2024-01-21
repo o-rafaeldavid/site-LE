@@ -19,7 +19,7 @@ class SpanToBrush{
         // from tag
         let limit = -1, corTraco = ""
 
-        const cirRadFraction = 0.05
+        const cirRadFraction = 0.02
         const maxRad = 7
         let finalRad = -1
         let arrayLinhas = []
@@ -155,7 +155,7 @@ class SpanToBrush{
             var p5Brushit = new p5(this.#createSketch, node)
         }
         else {
-            console.log('node inválido para o objeto (tem que ser um span de classe .spanToBrush):')
+            console.error('node inválido para o objeto (tem que ser um span de classe .spanToBrush):')
             console.log(this)
         }
     }

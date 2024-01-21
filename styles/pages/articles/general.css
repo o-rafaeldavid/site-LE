@@ -1,0 +1,20 @@
+    div.viewport:first-of-type{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+}
+
+    div.viewport:first-of-type > section{
+        position: relative;
+    }
+
+    div.viewport:first-of-type > section:first-of-type{
+        grid-column: span 2;
+    }
+    div.viewport:first-of-type > section:last-of-type{
+        grid-column: span 3;
+    }
+
+        div.viewport:first-of-type > section:last-of-type > article.columns{
+            width: calc(100% - 82px * 2);
+        }

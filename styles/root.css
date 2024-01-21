@@ -2,7 +2,12 @@
     --magenta: #E6007E;
     --magenta-on-black: #961d5d;
 
-    --font-size-h1: 20em;
+    --font-size-p: 18px;
+    --font-size-h1: 18em;
     --font-size-h2: 10em;
-    --font-size-h3: 7em;
+    --font-size-h3: 6em;
+    --font-size-h4: 2em;
+    --font-size-h5: 1em;
+
+    --scroll-thumb-height: 12px;
 }
