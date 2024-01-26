@@ -1,6 +1,6 @@
 article{
     position: relative;
-    margin: 128px auto;
+    margin: 120px auto;
     display: flex;
     flex-direction: column;
 }
@@ -10,6 +10,7 @@ article{
 
     article p{ text-align: justify; }
     article p::first-letter{ font-size: 1.5em ;}
+    article p{font-size: 1.2em;}
 
 article.columns{
     display: grid;
