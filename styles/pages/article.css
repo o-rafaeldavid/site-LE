@@ -10,7 +10,7 @@ article{
 
     article p{ text-align: justify; }
     article p::first-letter{ font-size: 1.5em ;}
-    article p{font-size: 1.2em;}
+    article p{font-size: 1.0em;}
 
 article.columns{
     display: grid;
