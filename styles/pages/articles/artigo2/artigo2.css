@@ -12,3 +12,10 @@ h1{
    align-items: center;
 
 }
+article{
+    margin: 100px auto;
+}
+
+article.columns {
+    gap: 44px;
+}
