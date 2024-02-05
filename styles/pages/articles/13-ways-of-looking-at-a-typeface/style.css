@@ -1,4 +1,4 @@
-
+*:not(main){ overflow: hidden !important; }
 
 /* viewport 0 */
 #michael-bierut-pessoa{
