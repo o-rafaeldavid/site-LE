@@ -18,8 +18,10 @@ main.onwheel = (e) => {
 
     let doMainScroll = true
     for(let i = mainIndex + 1; i < hoverNodeList.length; i++){
-        if(hoverNodeList[i].isOverflowing()){
+        if(hoverNodeList[i].isOverflowing() && hoverNodeList[i].tagName === "SECTION"){
             doMainScroll = false
+            console.log(hoverNodeList)
+            console.log(hoverNodeList[i])
             break
         }
     }
