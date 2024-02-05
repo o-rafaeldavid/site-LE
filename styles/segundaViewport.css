@@ -38,11 +38,18 @@
     
 
 div#pc > div,
-div#pc > div > img{
+div#pc > div > div[name="img"]{
     position: relative;
     height: 100%;
-    width: auto;
+    width: 100%;
 }
+
+div#pc > div > div[name="img"]{
+    background-image: url(../imgs/artigos/1/pc.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
 
 div#pc > div > section{
     height: 100%;

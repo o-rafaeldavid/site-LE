@@ -1,0 +1,7 @@
+#title{
+   display:block;
+   align-items: center;
+
+}
+
+div.viewport:first-of-type{ grid-template-columns: 1fr; }

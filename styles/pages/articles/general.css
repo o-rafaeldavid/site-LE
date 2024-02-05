@@ -1,4 +1,4 @@
-    div.viewport:first-of-type{
+div.viewport:first-of-type{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: 1fr;
@@ -17,4 +17,97 @@
 
         div.viewport:first-of-type > section:last-of-type > article.columns{
             width: calc(100% - 82px * 2);
+        }
+
+
+
+
+        h3{
+            text-align: left !important;
+        }
+        
+        h1 span{ font-family: 'GFS Didot', serif }
+        
+        
+        main {
+            counter-reset: counter;
+        }
+        
+
+        div.title{
+            display: flex;
+            align-items: end;
+            line-height: 1;
+            overflow: visible;
+        }
+        
+            div.title > h1{
+                line-height: 0.8;
+                overflow: visible;
+                padding-bottom: 12px;
+            }
+            /* div.title > h1::after{
+                counter-increment: counter;
+                content: counter(counter)".";
+            } */
+            div.title > h3{
+                flex-shrink: 1;
+                display: inline-block;
+                padding-bottom: 12px;
+            }
+                div.title > h3 > span{ font-size: 0.9em; }
+                div.title > h3 > span.because{
+                    color: var(--magenta);
+                }
+        
+        
+        
+        
+        
+        article{
+            margin-right: max(5%, 64px);
+            margin-left: max(5%, 64px);
+            height: calc(100% - 100px - 120px - 48px);
+        }
+
+        section:has(article.columns){ overflow-y: auto; }
+        section > article.columns{ height: auto; }
+
+        section > article:has(h4){ row-gap: 0 !important; }
+        article > section > article > h4{ grid-column: span 2; text-align: left; margin: 12px 0 12px 0; }
+        article > section > article > *:not(h4){ margin-bottom: 64px; }
+        
+        article.twodigits{
+            margin-right: max(3%, 32px);
+            margin-left: max(3%, 32px);
+        }
+        
+        div.viewport > article{
+            gap: 0;
+        }
+
+
+        figure > *{ width: 100%; }
+        figure > figcaption{ margin-top: 12px; }
+
+        *.whole{
+            grid-column: span 2
+        }
+        p.magentaBox{
+            background-color: var(--magenta);
+            color: white;
+            padding: 12px;
+            box-sizing: border-box;
+        }
+
+        ol{
+            counter-reset: li;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        ol > li:before{
+            counter-increment: li;
+            content: "[" counter(li) "]";
+            color: var(--magenta);
         }

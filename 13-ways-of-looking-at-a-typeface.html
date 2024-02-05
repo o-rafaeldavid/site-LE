@@ -32,6 +32,7 @@
 
         <script src="./js/config/sectionToDraw.js"></script>
         <script src="./js/pages/articles/generateArticle.js"></script>
+        <script src="./js/config/setImageAbove.js"></script>
     </head>
     
 
@@ -52,7 +53,7 @@
         <script>createInfo();</script>
         <main>
             <!-- INICIO -->
-            <div class="viewport" tit="00" txt="Introduction" italic="true">
+            <div class="viewport" id="tit00" tit="00" txt="Introduction" italic="true">
                 <section>
                     <img id="michael-bierut-pessoa" alt="" src="./imgs/artigos/1/michael-bierut-pessoa.jpg" class="absoluto">
                 </section>
@@ -148,10 +149,8 @@
             <!-- PONTO 01 -->
             <div
                 class="viewport" id="tit01" tit="01"
-                txt="Because <span class='noBreak'>it <span class='spanToBrush'>works.<span></span>"
+                txt="Because <span class='noBreak'>it <span class='spanToBrush' id='works'>works.<span></span>"
             >
-                <img alt="" src="./imgs/artigos/1/works1.png" id="works1" class="absoluto">
-                <img alt="" src="./imgs/artigos/1/curvinha.png" id="curvinha1-2" class="absoluto">
             </div>
             <script>
                 generateArticle(
@@ -169,6 +168,22 @@
                     </p>
                     `
                 );
+
+                setImageAbove(
+                    document.getElementById('works'),
+                    document.getElementById('tit01'),
+                    "./imgs/artigos/1/works1.png",
+                    {
+                        translate: "60px 120px",
+                        scale: 1.4
+                    }
+                )
+
+                setImageAbove(
+                    document.getElementById('works'),
+                    document.getElementById('tit01'),
+                    "./imgs/artigos/1/curvinha.png"
+                )
             </script>
             
 
@@ -245,8 +260,7 @@
             <!--  -->
             <!-- PONTO 04 -->
             <div class="viewport" id="tit04" tit="04" txt="Because <span class='noBreak'>of who</span> <span class='spanToBrush' limit='200'>designed<span> it.">
-                <img alt="" src="./imgs/artigos/1/ididtoo.png" id="ididtoo" class="absoluto">
-            
+
             </div>
             <script>
                 generateArticle(
@@ -273,6 +287,7 @@
                         the font selection, but took some comfort
                         in it nonetheless. I did too.
                     </p>
+                    <img alt="" src="./imgs/artigos/1/ididtoo.png" id="ididtoo">
                     `
                 )
             </script>
@@ -280,8 +295,7 @@
             
             <!--  -->
             <!-- PONTO 05 -->
-            <div class="viewport" id="tit05" tit="05" txt="Because it was there.">
-                <img alt="" src="./imgs/artigos/1/risco.png" id="risco" class="absoluto">
+            <div class="viewport" id="tit05" tit="05" txt="Because it was <span id='there'>there.<span>">
             </div>
             
             <script>
@@ -307,6 +321,13 @@
                         more fun.
                     </p>
                     `
+                )
+
+                setImageAbove(
+                    document.getElementById('there'),
+                    document.getElementById('tit05'),
+                    "./imgs/artigos/1/risco.png",
+                    { scale: 1.4 }
                 )
             </script>
             <!--  -->
@@ -390,7 +411,6 @@
             <!--  -->
             <!-- PONTO 09 -->
             <div class="viewport" id="tit09" tit="09" txt="Because <span class='noBreak'>it’s ugly.</span>">
-                <img alt="" src="./imgs/artigos/1/ugly.png" id="ugly" class="absoluto">
             </div>
             
             <script>
@@ -416,15 +436,18 @@
                         It was set in Bookman Swash Italic, and
                         it looked great. Ugly, but great.
                     </p>
+                    <img alt="" src="./imgs/artigos/1/ugly.png" id="ugly">
                     `
                 )
             </script>
             <!--  -->
             <!-- PONTO 10 -->
             <div class="viewport" id="tit10" tit="10" txt="Because it’s boring.">
-                <img alt="" src="./imgs/artigos/1/dez.png" id="dez" class="absoluto">
             </div>
             <script>
+                const aparecer10 = () => {
+                    document.getElementById("dez").style.display = "block"
+                }
                 generateArticle(
                     document.getElementById("tit10"),
                     `
@@ -438,15 +461,23 @@
                         got in the way of the ideas. We settled
                         on Trade Gothic.
                     </p>
-                    `
+                    `,
+                    "aparecer10()"
+                )
+
+                setImageAbove(
+                    document.querySelector('#tit10 h1'),
+                    document.getElementById('tit10'),
+                    "./imgs/artigos/1/dez.png",
+                    { translate: "0 200px", display: "none" },
+                    "dez"
                 )
             </script>
 
             
             <!--  -->
             <!-- PONTO 11 -->
-            <div class="viewport" id="tit11" tit="11" txt="Because it’s special.">
-                <img alt="" src="./imgs/artigos/1/risco3.png" id="risco3" class="absoluto">
+            <div class="viewport" id="tit11" tit="11" txt="Because it’s <span id='special'>special<span>.">
             </div>
             <script>
                 generateArticle(
@@ -465,13 +496,18 @@
                     </p>
                     `
                 )
+
+                setImageAbove(
+                    document.getElementById('special'),
+                    document.getElementById('tit11'),
+                    "./imgs/artigos/1/risco3.png"
+                )
             </script>
 
             
             <!--  -->
             <!-- PONTO 12 -->
             <div class="viewport" id="tit12" tit="12" txt="Because you believe in it.">
-                <img alt="" src="./imgs/artigos/1/world.png" id="world" class="absoluto">
             </div>
             <script>
                 generateArticle(
@@ -493,6 +529,7 @@
                         the time is right, I might make that kind
                         of commitment myself.
                     </p>
+                    <img alt="" src="./imgs/artigos/1/world.png" id="world">
                     `
                 )
             </script>
@@ -501,7 +538,6 @@
             <!--  -->
             <!-- PONTO 13 -->
             <div class="viewport" id="tit13" tit="13" txt="Because you can’t not.">
-                <img alt="" src="./imgs/artigos/1/slutty.png" id="slutty" class="absoluto">
             </div>
             <script>
                 generateArticle(
@@ -525,6 +561,7 @@
                         Garamond?” He looked at me as if I was
                         crazy. “Of course,” he said.
                     </p>
+                    <img alt="" src="./imgs/artigos/1/slutty.png" id="slutty">
                     `
                 )
             </script>

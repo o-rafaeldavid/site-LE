@@ -105,11 +105,11 @@ main{
     width: 100dvw;
     height: 100dvh;
 }
-    main::-webkit-scrollbar{
+    *::-webkit-scrollbar{
         background-color: var(--magenta-on-black);
         height: var(--scroll-thumb-height);
     }
-    main::-webkit-scrollbar-thumb{
+    *::-webkit-scrollbar-thumb{
         background-color: var(--magenta);
     }
 

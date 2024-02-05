@@ -5,13 +5,27 @@ const getNowMaxScroll = () => main.scrollWidth - main.clientWidth
 let prevMaxScroll = -1
 const setPrevMaxScroll = () => { prevMaxScroll = getNowMaxScroll() }
 
-
+                    Element.prototype.isOverflowing = function(){
+                        return this.scrollHeight > this.clientHeight || this.scrollWidth > this.clientWidth;
+                    }
 
 
 main.onwheel = (e) => {
     const sinal = Math.sign(e.wheelDelta)
 
+    const hoverNodeList = document.querySelectorAll(":hover")
+    const mainIndex = Array.prototype.indexOf.call(hoverNodeList, main)
+
+    let doMainScroll = true
+    for(let i = mainIndex + 1; i < hoverNodeList.length; i++){
+        if(hoverNodeList[i].isOverflowing()){
+            doMainScroll = false
+            break
+        }
+    }
+
     if(
+        doMainScroll &&
         !main.classList.contains("scrolling") &&
         (
             (sinal < 0 && main.scrollLeft < getNowMaxScroll()) ||
@@ -54,3 +68,5 @@ addOnWindowResize(() => {
 
     main.scrollLeft = scrollRemapeado
 })
+
+

@@ -1,58 +1,3 @@
-h3{
-    text-align: left !important;
-}
-
-h1 span{ font-family: 'GFS Didot', serif }
-
-
-main {
-    counter-reset: counter;
-}
-
-div.title{
-    display: flex;
-    align-items: end;
-    line-height: 1;
-    overflow: visible;
-}
-
-    div.title > h1{
-        line-height: 0.8;
-        overflow: visible;
-        padding-bottom: 12px;
-    }
-    /* div.title > h1::after{
-        counter-increment: counter;
-        content: counter(counter)".";
-    } */
-    div.title > h3{
-        flex-shrink: 1;
-        display: inline-block;
-        padding-bottom: 12px;
-    }
-        div.title > h3 > span{ font-size: 0.9em; }
-        div.title > h3 > span.because{
-            color: var(--magenta);
-        }
-
-
-
-
-
-article{
-    margin-right: max(5%, 64px);
-    margin-left: max(5%, 64px);
-}
-
-article.twodigits{
-    margin-right: max(3%, 32px);
-    margin-left: max(3%, 32px);
-}
-
-div.viewport > article{
-    gap: 0;
-}
-
 
 
 /* viewport 0 */
@@ -96,7 +41,6 @@ div.viewport > article{
 }
 
 #ididtoo{
-    bottom: 0; right: 40dvh;
     width: 300px; height: auto;
 }
 
@@ -138,7 +82,6 @@ div.viewport > article{
 
 /*9*/
 #ugly{
-    bottom: 0; right: 50dvh; top: 2dvh;
     width: 300px; height: auto;
 }
 
@@ -160,14 +103,12 @@ div.viewport > article{
 
 /*12*/
 #world{
-    bottom: 0; left: 100dvh; top:60dvh;
     width: 300px; height: auto;
 }
 /*13*/
 
 
 #slutty{
-    bottom: 0; right: 40dvh; top: 5dvh;
     width: 150px; height: auto;
 }
 

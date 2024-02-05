@@ -5,10 +5,24 @@
 
     --font-size-p: 18px;
     --font-size-h1: 18em;
-    --font-size-h2: 7em; /*antes estava 10*/
-    --font-size-h3: 5em;
+    --font-size-h2: 10em;
+    --font-size-h3: 6em;
     --font-size-h4: 2em;
     --font-size-h5: 1em;
 
     --scroll-thumb-height: 12px;
+}
+
+@media (max-height: 880px) or (max-width: 1650px){
+    :root{
+        --font-size-h1: 16em;
+        --font-size-h2: 8em;
+    }
+}
+
+@media (max-height: 750px) or (max-width: 1300px){
+    :root{
+        --font-size-h1: 14em;
+        --font-size-h2: 6em;
+    }
 }
