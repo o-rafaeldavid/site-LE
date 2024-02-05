@@ -1,5 +1,7 @@
 const setImageAbove = (nodeTo, parentNode, url, style = undefined, id = undefined) => {
-    setTimeout(() => {
+    window.addEventListener(
+        "load",
+        () => {
         const bounds = nodeTo.getBoundingClientRect()
 
         const img = document.createElement("img")
@@ -37,5 +39,5 @@ const setImageAbove = (nodeTo, parentNode, url, style = undefined, id = undefine
         }
 
         parentNode.appendChild(img)
-    }, 1)
+    })
 }
