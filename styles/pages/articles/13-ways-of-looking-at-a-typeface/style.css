@@ -1,4 +1,4 @@
-*:not(main){ overflow: hidden !important; }
+section:nth-of-type(2){ overflow: hidden !important; }
 
 /* viewport 0 */
 #michael-bierut-pessoa{
